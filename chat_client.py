@@ -5,6 +5,7 @@ import errno
 from colorama import init, Fore, Back, Style
 import socket
 import threading
+import time
 
 init(convert=True)
 HEADER_LENGTH = 10
@@ -18,7 +19,7 @@ print("\033[36m" + """
     ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝
 
     -----------------------------------
-    Version: Alpha 1_0.2
+    Version: Alpha 1_0.4
     Author: Wiskey666
     Mail: 1488step@horsefucker.org
     DS: yourmomgay#1488
@@ -32,16 +33,16 @@ print("\033[36m" + """
 """)
 print(Style.RESET_ALL)
 
-IP = input('IP: ')
-PORT = int(input('Port: '))
+IP = input('    IP: ')
+PORT = int(input('    Port: '))
 
 # Choosing Nickname
-nickname = input("Username: ")
+nickname = input('    Username: ')
+print('\n')
 
 # Connecting To Server
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((IP, PORT))
-
 # Listening to Server and Sending Nickname
 def receive():
     while True:
@@ -52,11 +53,11 @@ def receive():
             if message == 'NICK':
                 client.send(nickname.encode('ascii'))
             else:
-                print("\033[33m" + message)
+                print(Fore.GREEN +'░' + Fore.YELLOW + '░' + Fore.GREEN + '░ ' + Fore.WHITE + message)
                 print(Style.RESET_ALL)
         except:
             # Close Connection When Error
-            print("[-] An error occured!")
+            print(Fore.GREEN +'>' + Fore.YELLOW + '>' + Fore.GREEN + '> ' + Fore.RED + "[-] An error occured!")
             client.close()
             break
 
@@ -75,3 +76,4 @@ receive_thread.start()
 
 write_thread = threading.Thread(target=write)
 write_thread.start()
+
