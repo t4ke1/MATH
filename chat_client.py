@@ -8,7 +8,6 @@ import threading
 import time
 
 init(convert=True)
-HEADER_LENGTH = 10
 
 print("\033[36m" + """
     ███╗   ███╗ █████╗ ████████╗██╗  ██╗
@@ -19,7 +18,7 @@ print("\033[36m" + """
     ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝
 
     -----------------------------------
-    Version: Alpha 1_0.4
+    Version: Alpha 1_0.5
     Author: Wiskey666
     Mail: 1488step@horsefucker.org
     DS: yourmomgay#1488
@@ -30,6 +29,9 @@ print("\033[36m" + """
     Thank you for noticing and trying it!
 
     -----------------------------------
+        IP     Port        Name
+    aoa.pp.ua  8080  #general_server
+    -----------------------------------
 """)
 print(Style.RESET_ALL)
 
@@ -38,11 +40,14 @@ PORT = int(input('    Port: '))
 
 # Choosing Nickname
 nickname = input('    Username: ')
-print('\n')
 
+print("""
+    -----------------------------------    
+""")
 # Connecting To Server
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((IP, PORT))
+
 # Listening to Server and Sending Nickname
 def receive():
     while True:
@@ -54,13 +59,13 @@ def receive():
                 client.send(nickname.encode('ascii'))
             else:
                 print(Fore.GREEN +'░' + Fore.YELLOW + '░' + Fore.GREEN + '░ ' + Fore.WHITE + message)
-                print(Style.RESET_ALL)
+                #print(Style.RESET_ALL)
         except:
-            # Close Connection When Error
+            # Close Connection When Error 
             print(Fore.GREEN +'>' + Fore.YELLOW + '>' + Fore.GREEN + '> ' + Fore.RED + "[-] An error occured!")
             client.close()
             break
-
+        
 # Sending Messages To Server
 def write():
     while True:
