@@ -16,7 +16,7 @@ print("\033[36m" + """
     ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝
 
     -----------------------------------
-    Version: Alpha 1_0.2
+    Version: Alpha 1_0.5
     Author: Wiskey666
     Mail: 1488step@horsefucker.org
     DS: yourmomgay#1488
@@ -81,10 +81,12 @@ def receive():
         # Print And Broadcast Nickname
         print("Nickname is {}".format(nickname))
         broadcast("[+] {} joined!".format(nickname).encode('ascii'))
-        client.send('[+] Connected to server!'.encode('ascii'))
+        client.send('[+] Connected to #general_server!'.encode('ascii'))
 
         # Start Handling Thread For Client
         thread = threading.Thread(target=handle, args=(client,))
         thread.start()
 
 receive()
+
+
