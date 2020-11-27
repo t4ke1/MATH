@@ -22,7 +22,7 @@ print("\033[36m" + """
     ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝
 
     -----------------------------------
-    Version: Alpha 1_0.6.3
+    Version: Alpha 1_0.6.4
     Author: Wiskey666
     Mail: 1488step@horsefucker.org
     DS: yourmomgay#1488
@@ -41,6 +41,7 @@ print(Style.RESET_ALL)
 
 IP = input('    IP: ')
 PORT = int(input('    Port: '))
+ver = "Alpha 1_0.6.4"
 
 # Choosing Nickname
 nickname = input('    Username: ')
@@ -61,6 +62,7 @@ def receive():
             message = client.recv(1024).decode('utf-8')
             if message == 'NICK':
                 client.send(nickname.encode('utf-8'))
+                client.send(ver.encode('utf-8'))
             else:
                 print(Fore.GREEN +'░' + Fore.YELLOW + '░' + Fore.GREEN + '░ ' + Fore.WHITE + message)
                 #print(Style.RESET_ALL)

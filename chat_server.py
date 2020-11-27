@@ -16,7 +16,7 @@ print("\033[36m" + """
     ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝
 
     -----------------------------------
-    Version: Alpha 1_0.6.3
+    Version: Alpha 1_0.6.4
     Author: Wiskey666
     Mail: 1488step@horsefucker.org
     DS: yourmomgay#1488
@@ -31,10 +31,10 @@ print("\033[36m" + """
 print(Style.RESET_ALL)
 
 # Connection Data
-host= '127.0.0.1'
-port= 55555
-
-ver= 'Alpha 1_0.6.2'
+host= input('    Set host IP: ')
+port= input('    Set host port: ')
+channel_name = "#" + input('    Set channel name: ')
+ver= 'Alpha 1_0.6.4'
 
 # Starting Server
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -77,17 +77,29 @@ def receive():
         # Request And Store Nickname
         client.send('NICK'.encode('utf-8'))
         nickname = client.recv(1024).decode('utf-8')
+        client_ver = client.recv(1024).decode('utf-8')
         nicknames.append(nickname)
         clients.append(client)
+       
 
         # Print And Broadcast Nickname
         print("Nickname is {}".format(nickname))
-        broadcast("[+] {} joined!".format(nickname).encode('utf-8'))
-        client.send('[+] Connected to #general_server!'.encode('utf-8'))
-
+        if client_ver == ver:
+            print("Client version: " + client_ver)
+            broadcast("[+] {} joined!".format(nickname).encode('utf-8'))
+            client.send("[+] Connected to {}!".format(channel_name).encode('utf-8'))
+        else:
+            print("Client version: " + client_ver + " (TOO OLD!)")
+            
         # Start Handling Thread For Client
-        thread = threading.Thread(target=handle, args=(client,))
-        thread.start()
+        if client_ver == ver:
+            thread = threading.Thread(target=handle, args=(client,))
+            thread.start()
+        else:
+            clients.remove(client)
+            client.close()
+            nicknames.remove(nickname)
+
 
 receive()
 
