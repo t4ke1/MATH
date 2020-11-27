@@ -22,7 +22,7 @@ print("\033[36m" + """
     ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝
 
     -----------------------------------
-    Version: Alpha 1_0.6.2
+    Version: Alpha 1_0.6.3
     Author: Wiskey666
     Mail: 1488step@horsefucker.org
     DS: yourmomgay#1488
