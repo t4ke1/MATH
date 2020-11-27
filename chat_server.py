@@ -32,7 +32,7 @@ print(Style.RESET_ALL)
 
 # Connection Data
 host= input('    Set host IP: ')
-port= input('    Set host port: ')
+port= int(input('    Set host port: '))
 channel_name = "#" + input('    Set channel name: ')
 ver= 'Alpha 1_0.6.4'
 
