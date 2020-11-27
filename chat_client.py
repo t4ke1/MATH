@@ -7,6 +7,10 @@ import socket
 import threading
 import time
 
+from win10toast import ToastNotifier
+
+toaster = ToastNotifier()
+
 init(convert=True)
 
 print("\033[36m" + """
@@ -30,7 +34,7 @@ print("\033[36m" + """
 
     -----------------------------------
         IP     Port        Name
-    aoa.pp.ua  8080  #general_server
+    aoa.pp.ua  55555  #general_server
     -----------------------------------
 """)
 print(Style.RESET_ALL)
