@@ -1,4 +1,4 @@
-# math
+# MATH
 ![Иллюстрация к проекту](https://github.com/Wiskey666/MATH/raw/beta_versions/img.png)
 
 This is a console chat for special lovers of this shit.
@@ -15,7 +15,7 @@ pip install win10toast
 2. Run chat_server.py and enter ip, port and channel name.
 3. Run chat_client.py and connect to server.
 
-# Installation for Termux
+# Installation for Termux and Linux
 
 1. Install termcolor
 ```no-highlight
