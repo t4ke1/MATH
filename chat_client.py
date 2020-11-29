@@ -52,18 +52,18 @@ print(Fore.CYAN + """
     ░  ░      ░  ▒   ▒▒ ░   ░     ▒ ░▒░ ░
     ░      ░     ░   ▒    ░       ░  ░░ ░
        ░         ░  ░         ░  ░  ░                                     
-""" + "\33[90m" + """
+""" + "\33[37m\33[1m" + """
     -----------------------------------""" + Fore.CYAN + """
     Version: Alpha 1_1
     Author: Wiskey666
     Mail: 1488step@horsefucker.org
-    DS: yourmomgay#1488""" + "\33[90m" + """
+    DS: yourmomgay#1488""" + "\33[37m\33[1m" + """
     -----------------------------------""" + Fore.CYAN + """
 
     This is a console chat for special lovers of this shit.
     The chat will be improved (both the client side and the server side).
     Thank you for noticing and trying it!
-""" + "\33[90m" + """
+""" + "\33[37m\33[1m" + """
     -----------------------------------""" + Fore.CYAN + """
     """+ Fore.WHITE)
 
@@ -94,7 +94,7 @@ if nickname == '':
     time.sleep(5)
     sys.exit()
 
-print("""
+print("\33[37m\33[1m" + """
     -----------------------------------    
 """)
 # Connecting To Server
