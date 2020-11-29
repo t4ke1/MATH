@@ -1,5 +1,5 @@
 # math
-![Иллюстрация к проекту](https://prnt.sc/vsc2wb)
+![Иллюстрация к проекту](https://github.com/Wiskey666/MATH/raw/beta_versions/img.png)
 
 This is a console chat for special lovers of this shit.
 The chat will be improved (both the client side and the server side).
