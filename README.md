@@ -13,8 +13,15 @@ pip install win10toast
 ```
 
 2. Run chat_server.py and enter ip, port and channel name.
+3. Run chat_client.py and connect to server.
 
-3. Run chat_client.py and connect to server..
+# Installation for Termux
 
-It's all :3
+1. Install termcolor
+```no-highlight
+pip install termcolor
+```
+2. Run chat_client.py and connect to server.
+
+
 
