@@ -140,6 +140,7 @@ def receive():
             # Close Connection When Error 
             print(Fore.RED +'>' + Fore.WHITE + '>' + Fore.RED + '> ' + Fore.RED + "[-] An error occured!")
             client.close()
+            break
 # Sending Messages To Server
 def write():
     while True:
