@@ -61,7 +61,7 @@ cprint("""
 # Client Settings
 IP = input('    IP: ')
 if IP == '':
-    cprint("\n    [!] Please enter IP!", 'yellow, attrs=['bold'])
+    cprint("\n    [!] Please enter IP!", 'yellow', attrs=['bold'])
     time.sleep(5)
     sys.exit()
     
