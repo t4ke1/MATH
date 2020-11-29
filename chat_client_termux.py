@@ -30,7 +30,7 @@ W$@@M!!! .!~~ !!     .:XUW$W!~ `"~:    :
 Wi.~!X$?!-~    : ?$$$B$Wu("**$RM!
 $R@i.~~ !     :   ~$$$$$B$$en:``
 ?MXT@Wx.~    :     ~"##*$$$$M~
-    """, 'magenta', attrs=['reverse', 'blink'])
+    """, 'magenta', attrs=['bold'])
 
 time.sleep(2)
 os.system('cls||clear')
@@ -56,23 +56,23 @@ cprint("""
     This is a console chat for special lovers of this shit.
     The chat will be improved (both the client side and the server side).
     Thank you for noticing and trying it!
-    -----------------------------------""", 'cyan', attrs=['reverse', 'blink'])
+    -----------------------------------""", 'cyan', attrs=['bold'])
 
 # Client Settings
 IP = input('    IP: ')
 if IP == '':
-    cprint("\n    [!] Please enter IP!", 'yellow')
+    cprint("\n    [!] Please enter IP!", 'yellow, attrs=['bold']')
     time.sleep(5)
     sys.exit()
     
 try:
     PORT = int(input('    Port: '))
     if PORT == '':
-        cprint("\n    [!] Please enter port!", 'yellow')
+        cprint("\n    [!] Please enter port!", 'yellow', attrs=['bold'])
         time.sleep(5)
         sys.exit()   
 except ValueError:
-    cprint("\n    [!] Port must be an integer!", 'yellow')
+    cprint("\n    [!] Port must be an integer!", 'yellow', attrs=['bold'])
     time.sleep(5)
     sys.exit()
     
@@ -81,7 +81,7 @@ ver = "Alpha 1_1"
 # Choosing Nickname
 nickname = input('    Username: ')
 if nickname == '':
-    cprint("\n    [!] Please enter nickname!", 'yellow')
+    cprint("\n    [!] Please enter nickname!", 'yellow', attrs=['bold'])
     time.sleep(5)
     sys.exit()
 
@@ -94,7 +94,7 @@ try:
     client.connect((IP, PORT))
 except socket.error as e:
     if e.errno == errno.ECONNREFUSED:
-        cprint("\n    [!] Server refused connection or unavailable", 'yellow')
+        cprint("\n    [!] Server refused connection or unavailable", 'yellow', attrs=['bold'])
     else:
         raise
 
@@ -108,16 +108,16 @@ def receive():
             #Version Check
             #If Server Sends Conflict Code - Kick
             if "Code 409" in message:
-                e1 = colored("░", 'red')
-                e2 = colored("░", 'white')
-                e3 = colored("░ ", 'red')
+                e1 = colored("░", 'red', attrs=['bold'])
+                e2 = colored("░", 'white',attrs=['bold'])
+                e3 = colored("░ ", 'red', attrs=['bold'])
                 print(e1 + e2 + e3 + message)
                 client.close()
                 break
             if "Code 401" in message:
-                e1 = colored("░", 'red')
-                e2 = colored("░", 'white')
-                e3 = colored("░ ", 'red')
+                e1 = colored("░", 'red', attrs=['bold'])
+                e2 = colored("░", 'white', attrs=['bold'])
+                e3 = colored("░ ", 'red', attrs=['bold'])
                 print(e1 + e2 + e3 + message)
                 client.close()
                 break
@@ -127,14 +127,14 @@ def receive():
                     client.send(nickname.encode('utf-8'))
                     client.send(ver.encode('utf-8'))
                 else:
-                    e1 = colored("░", 'red')
-                    e2 = colored("░", 'white')
-                    e3 = colored("░ ", 'red')
+                    e1 = colored("░", 'red', attrs=['bold'])
+                    e2 = colored("░", 'white', attrs=['bold'])
+                    e3 = colored("░ ", 'red', attrs=['bold'])
                     print(e1 + e2 + e3 + message)
         except:
-            e11 = colored(">", 'red')
-            e22 = colored(">", 'white')
-            e33 = colored("> ", 'red')
+            e11 = colored(">", 'red', attrs=['bold'])
+            e22 = colored(">", 'white', attrs=['bold'])
+            e33 = colored("> ", 'red', attrs=['bold'])
             # Close Connection When Error 
             print(e11 + e22 + e33 + "[-] An error occured!")
             client.close()
