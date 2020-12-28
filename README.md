@@ -14,12 +14,12 @@ Original repository:
 **Alpha 1_2.5.1**
 
 
-    > :warning: **WARNING:** THIS IS NOT STABILE VERSION
-	> THIS IS WORK UPDATE - IT ONLY DEMO. MOST FUNCTIONS DO NOT WORK!
+> :warning: **WARNING:** THIS IS NOT STABILE VERSION
+> THIS IS WORK UPDATE - IT ONLY DEMO. MOST FUNCTIONS DO NOT WORK!
 	
-	
-	In this version i try create cofig for the server, commands in chat, and optimize code...
-	But in this update it did not work out very well ... :D
+
+In this version i try create cofig for the server, commands in chat, and optimize code...
+But in this update it did not work out very well ... :D
 
 # Installation
 1. Install colorama and win10toast
