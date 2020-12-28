@@ -69,7 +69,11 @@ CH_NAME: NAME
 # Commands
 
 `/q` - Exit from the server (NOW NOT WORKING NORMALY!)
+
+
 `/rules` - Show server rules
+
+
 `/kick {user}` - Kick specified user (NOW NOT WORKING!!!)
 
 # Error codes
