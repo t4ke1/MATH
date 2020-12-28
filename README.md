@@ -8,15 +8,13 @@ Thank you for noticing and trying it!
 Original repository:
 
 
-[![Original repository](https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats)](https://github.com/Wiskey666/MATH)
+[![Original repository](https://github-readme-stats.vercel.app/api/pin/?username=Wiskey666&repo=MATH)](https://github.com/Wiskey666/MATH)
 
 # Version info
 **Alpha 1_2.5.1**
 
 
     > :warning: **WARNING:** THIS IS NOT STABILE VERSION
-	
-	
 	> THIS IS WORK UPDATE - IT ONLY DEMO. MOST FUNCTIONS DO NOT WORK!
 	
 	
@@ -53,10 +51,20 @@ CH_NAME: NAME
 
 
 `Auto` - auto-init parameter. (1 - enable, 0 - disable)
+
+
 	`IP` - auto-init host ip
+	
+	
 	`PORT` - auto-init host port
+	
+	
 	`CH_NAME` - auto-init host name
+	
+	
 `Log` - logging parameter. (1 - enable, 0 - disable) (NOW NOT WORKING!!)
+
+
 `RULES` - rules of the server... 
 
 
