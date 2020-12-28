@@ -91,7 +91,11 @@ except ValueError:
     time.sleep(5)
     sys.exit()
     
+<<<<<<< Updated upstream
 ver = "Alpha 1_1"
+=======
+ver = "Alpha 1_2.5.1"
+>>>>>>> Stashed changes
 
 # Choosing Nickname
 nickname = input('    Username: ')
@@ -126,7 +130,11 @@ def receive():
                 print(Fore.GREEN +'░' + Fore.YELLOW + '░' + Fore.GREEN + '░ ' + Fore.WHITE + message)
                 client.close()
                 break
-            if "Code 401" in message:
+            elif "Code 401" in message:
+                print(Fore.GREEN +'░' + Fore.YELLOW + '░' + Fore.GREEN + '░ ' + Fore.WHITE + message)
+                client.close()
+                break
+            elif "Code 1" in message:
                 print(Fore.GREEN +'░' + Fore.YELLOW + '░' + Fore.GREEN + '░ ' + Fore.WHITE + message)
                 client.close()
                 break
