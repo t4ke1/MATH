@@ -54,11 +54,7 @@ CH_NAME: NAME
 
 
 	`IP` - auto-init host ip
-	
-	
 	`PORT` - auto-init host port
-	
-	
 	`CH_NAME` - auto-init host name
 	
 	
