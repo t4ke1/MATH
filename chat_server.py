@@ -106,21 +106,9 @@ except:
     time.sleep(5)
     sys.exit() 
 
-<<<<<<< Updated upstream
-try:
-    port = int(input('    Set host port: '))
-except ValueError:
-    print(Fore.YELLOW + "\n    [!]  Port must be an integer!")
-    time.sleep(5)
-    sys.exit() 
-    
-channel_name = "#" + input('    Set channel name: ')
-ver= 'Alpha 1_1'
-=======
 rules = config.readline().rstrip()[7:]
 
 ver= 'Alpha 1_2.5.1'
->>>>>>> Stashed changes
 
 print("\33[90m" + """
     -----------------------------------"""+ Fore.WHITE)

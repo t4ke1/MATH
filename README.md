@@ -40,7 +40,8 @@ PORT: 55555
 CH_NAME: NAME
 ```
 
-> :warning: **Important:** ALLWAYS USE 1 SPACE BETWEN PARAMETER AND VALUE
+> :warning: **Important:** 
+> ALLWAYS USE 1 SPACE BETWEN PARAMETER AND VALUE
 `Auto` - auto-init parameter. (1 - enable, 0 - disable)
 	`IP` - auto-init host ip
 	`PORT` - auto-init host port

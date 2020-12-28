@@ -91,11 +91,7 @@ except ValueError:
     time.sleep(5)
     sys.exit()
     
-<<<<<<< Updated upstream
-ver = "Alpha 1_1"
-=======
 ver = "Alpha 1_2.5.1"
->>>>>>> Stashed changes
 
 # Choosing Nickname
 nickname = input('    Username: ')
