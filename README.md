@@ -44,10 +44,12 @@ Log: 1
 IP: localhost
 PORT: 55555
 CH_NAME: NAME
+RULES: Rules
 ```
 
 > :warning: **Important:** 
-> ALLWAYS USE 1 SPACE BETWEN PARAMETER AND VALUE
+> ALLWAYS USE 1 SPACE BETWEN PARAMETER AND VALUE!
+> ALLWAYS RULES MUST BE IN ONE STRING!
 
 
 `Auto` - auto-init parameter. (1 - enable, 0 - disable)
@@ -68,18 +70,35 @@ CH_NAME: NAME
 
 # Commands
 
-`/q` - Exit from the server (NOW NOT WORKING NORMALY!)
+`/q` - Exit from the server
 
 
 `/rules` - Show server rules
 
 
-`/kick {user}` - Kick specified user (NOW NOT WORKING!!!)
+`/kick {user}` - Kick specified user 
+
+
+`/ban {user}` - Ban specified user
+
+
+`/unban {user}` - Unban specified user
+
+
+> Ban until the server is restarted ...
+
+
+`/mute {user}` - Mute specified user 
+
+
+`/unmute {user}` - Ummute specified user  
 
 # Error codes
 | Code   | Error or status         |
 |:------:| ----------------------- |
+| 503    | Incorrect nickname.     |
 | 409    | Unsupported version.    |
+| 403    | Access denied.          |
 | 401    | Already exist client.   |
 | 400    | Kick from the server.   |
 | 1      | Exit, Success.          |

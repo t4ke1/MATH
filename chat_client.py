@@ -9,10 +9,10 @@ import threading
 import time
 import os
 
-from win10toast import ToastNotifier
+import win10toast
 
 # Inits
-toaster = ToastNotifier()
+toaster = win10toast.ToastNotifier()
 init(convert=True)
 
 # Logo
@@ -59,7 +59,7 @@ print(Fore.CYAN + """
     ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝
 """ + "\33[90m" + """
     -----------------------------------""" + Fore.CYAN + """
-    Version: Alpha 1_1
+    Version: 1_5.5.1
     Author: Wiskey666
     Forked by: Ampernic
     Mail: ampernic@list.ru
@@ -91,7 +91,7 @@ except ValueError:
     time.sleep(5)
     sys.exit()
     
-ver = "Alpha 1_2.5.1"
+ver = "Alpha 1_5.5.1"
 
 # Choosing Nickname
 nickname = input('    Username: ')
@@ -148,8 +148,16 @@ def receive():
                        toaster.show_toast("MATH", message, threaded=True)
         except:
             # Close Connection When Error 
-            print(Fore.GREEN +'>' + Fore.YELLOW + '>' + Fore.GREEN + '> ' + Fore.RED + "[-] An error occured!")
-            client.close()
+            print(Fore.RED +'>' + Fore.WHITE + '>' + Fore.RED + '> ' + Fore.RED + "[-] An error occured!" + Fore.YELLOW)
+            reconnect = input("    [?] Connection lost... Try reconnect? (Y/n): ")
+            if reconnect == "Y" or reconnect == "Y":
+                connect()
+            else:
+                print(Fore.WHITE + "\n    Thanks for using our client ... Goodbye ...")
+                time.sleep(2)
+                client.close()
+                sys.exit()
+                break
 # Sending Messages To Server
 def write():
     while True:
