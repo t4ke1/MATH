@@ -1,13 +1,6 @@
-import socket
-import select
-import errno
-from colorama import init, Fore, Back, Style
-import socket
-import threading
 import os
 import time
-import sys
-import sqlite3
+from colorama import init, Fore, Back, Style
 
 from res.init import * 
 from res.core import *

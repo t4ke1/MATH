@@ -27,6 +27,7 @@ But in this update it did not work out very well ... :D
 pip install colorama
 pip install win10toast
 pip install psutil
+pip install builtins
 ```
 
 2. Run chat_server.py and enter ip, port and channel name.
