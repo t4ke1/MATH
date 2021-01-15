@@ -11,15 +11,12 @@ Original repository:
 [![Original repository](https://github-readme-stats.vercel.app/api/pin/?username=Wiskey666&repo=MATH)](https://github.com/Wiskey666/MATH)
 
 # Version info
-**Alpha 1_2.5.1**
+**Alpha 1_5.5.1**
 
+Commands update...
+Ban, kick, mute are here ;3
 
-> :warning: **WARNING:** THIS IS NOT STABILE VERSION
-> THIS IS WORK UPDATE - IT ONLY DEMO. MOST FUNCTIONS DO NOT WORK!
-	
-
-In this version i try create cofig for the server, commands in chat, and optimize code...
-But in this update it did not work out very well ... :D
+Some comments in code... 
 
 # Installation
 1. Install colorama and win10toast
