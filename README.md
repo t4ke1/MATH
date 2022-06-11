@@ -1,7 +1,7 @@
 # MATH
 ![Иллюстрация к проекту](https://github.com/Wiskey666/MATH/raw/beta_versions/img.png)
 
-This is a console chat for special lovers of this shit.
+This is a console chat for special lovers.
 The chat will be improved (both the client side and the server side).
 Thank you for noticing and trying it!
 
